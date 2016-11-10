@@ -9,7 +9,7 @@ npm install --save-dev gulp
 * Then, you need to install plugins.
 
 ```javascript
-npm install gulp-jade jshint gulp-sass gulp-concat gulp-uglify gulp-rename gulp-more-css gulp-cssnano gulp-imagemin --save-dev
+npm install gulp-jade gulp-jshint gulp-sass gulp-concat gulp-uglify gulp-rename gulp-more-css gulp-cssnano gulp-imagemin --save-dev
 ```
 
 * Clone repository.
