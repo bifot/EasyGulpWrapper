@@ -1,0 +1,38 @@
+{
+  "name": "easygulpwrapper",
+  "version": "2.0.0",
+  "description": "Easy gulp wrapper, don't need more...",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-jade": "^1.1.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-more-css": "^1.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.0.0",
+    "gulp-uglify": "^2.0.0",
+    "jshint": "^2.9.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bifot/EasyGulpWrapper.git"
+  },
+  "keywords": [
+    "gulp",
+    "sass",
+    "js",
+    "jade"
+  ],
+  "author": "Mikhail Semin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bifot/EasyGulpWrapper/issues"
+  },
+  "homepage": "https://github.com/bifot/EasyGulpWrapper#readme"
+}

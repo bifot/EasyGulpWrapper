@@ -1,23 +1,31 @@
 # Easy Gulp Wrapper
 
-* To start using the Easy Gulp Wrapper, you need to install Gulp locally in the project folder.
+**Делаем все красиво:**
 
-```javascript
-npm install --save-dev gulp
+* Клонируем репозиторий
+
 ```
-
-* Then, you need to install plugins.
-
-```javascript
-npm install gulp-jade gulp-jshint gulp-sass gulp-concat gulp-uglify gulp-rename gulp-more-css gulp-cssnano gulp-imagemin --save-dev
-```
-
-* Clone repository.
-
-```javascript
 git clone https://github.com/bifot/EasyGulpWrapper
 ```
 
-___________
+* Переходим в папку с проектом
 
-© 2016. Developed by [Mikhail Semin](http://bifot.ru).
+```
+cd EasyGulpWrapper
+```
+
+* Затем устанавливаем все пакеты
+
+```
+npm install
+```
+
+* Все готово. Запускаем gulp.
+
+```
+gulp
+```
+
+_________
+ 
+*Сделано с любовью, автор: [Михаил Семин](http://bifot.ru).*
