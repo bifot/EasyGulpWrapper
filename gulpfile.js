@@ -1,55 +1,57 @@
-// Include gulp
-var gulp = require("gulp");
+const gulp = require('gulp');
 
-// Include Our Plugins
-var jshint = require("gulp-jshint");
-var sass = require("gulp-sass");
-var concat = require("gulp-concat");
-var uglify = require("gulp-uglify");
-var rename = require("gulp-rename");
-var moreCSS = require("gulp-more-css");
-var cssnano = require("gulp-cssnano");
-var jade = require("gulp-jade");
+const autoprefixer = require('gulp-autoprefixer');
+const jshint = require('gulp-jshint');
+const sass = require('gulp-sass');
+const uglify = require('gulp-uglify');
+const rename = require('gulp-rename');
+const cssnano = require('gulp-cssnano');
+const jade = require('gulp-jade');
+
 
 // Lint Task
-gulp.task("lint", function() {
-  return gulp.src("src/js/*.js")
+gulp.task('lint', function() {
+  return gulp.src('src/js/*.js')
     .pipe(jshint())
-    .pipe(jshint.reporter("default"));
+    .pipe(jshint.reporter('default'));
 });
 
-// Compile Our Sass
-gulp.task("sass", function() {
-  return gulp.src("src/scss/*.scss")
+// Compile SASS
+gulp.task('sass', function() {
+  return gulp.src('src/scss/*.scss')
     .pipe(sass())
     .pipe(cssnano())
-    .pipe(gulp.dest("dist/css"));
+    .pipe(autoprefixer({
+      browsers: ['last 10 versions'],
+      cascade: false
+    }))
+    .pipe(gulp.dest('dist/css'));
 });
 
-// Concatenate & Minify JS
-gulp.task("scripts", function() {
-  return gulp.src("src/js/*.js")
-    .pipe(rename("app.js"))
+// Minify JS
+gulp.task('scripts', function() {
+  return gulp.src('src/js/*.js')
     .pipe(uglify())
-    .pipe(gulp.dest("dist/js"));
+    .pipe(gulp.dest('dist/js'));
 });
- 
-gulp.task("jade", function() {
-  var locals = new Object();
- 
-  gulp.src("src/*.jade")
+
+// Compile Jade
+gulp.task('jade', function() {
+  var locals = {};
+
+  gulp.src('src/*.jade')
     .pipe(jade({
       locals: locals
     }))
-    .pipe(gulp.dest("dist/"))
+    .pipe(gulp.dest('dist/'));
 });
 
 // Watch Files For Changes
-gulp.task("watch", function() {
-  gulp.watch("src/js/*.js", ["lint", "scripts"]);
-  gulp.watch("src/scss/*.scss", ["sass"]);
-  gulp.watch("src/*.jade", ["jade"]);
+gulp.task('watch', function() {
+  gulp.watch('src/js/*.js', ['lint', 'scripts']);
+  gulp.watch('src/scss/*.scss', ['sass']);
+  gulp.watch('src/*.jade', ['jade']);
 });
 
 // Default Task
-gulp.task("default", ["lint", "sass", "scripts", "jade", "watch"]);
+gulp.task('default', ['lint', 'sass', 'scripts', 'jade', 'watch']);

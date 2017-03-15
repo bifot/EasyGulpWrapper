@@ -1,31 +1,28 @@
-# Easy Gulp Wrapper
+# Easy Gulp Boilerplate
 
-**Делаем все красиво:**
-
-* Клонируем репозиторий
+* Clone a repository:
 
 ```
-git clone https://github.com/bifot/EasyGulpWrapper
+git clone https://github.com/bifot/easy-gulp-boilerplate
 ```
 
-* Переходим в папку с проектом
+* Open folder of project:
 
 ```
-cd EasyGulpWrapper
+cd easy-gulp-boilerplate
 ```
 
-* Затем устанавливаем все пакеты
+* Install all dependencies:
 
 ```
-npm install
+npm i
 ```
 
-* Все готово. Запускаем gulp.
+* Run gulp:
 
 ```
 gulp
 ```
-
 _________
- 
-*Сделано с любовью, автор: [Михаил Семин](http://bifot.ru).*
+
+*As usual, it's [me](https://github.com/bifot). It's [Mikhail Semin](http://bifot.ru).*
